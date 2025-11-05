@@ -1,0 +1,20 @@
+name: Demo Workflow Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "GitHub Actions workflow is working! 🚀"
+      
+      - name: Show demo file content
+        run: cat demo.txt
